@@ -28,6 +28,7 @@ RUN git clone https://github.com/Kohulan/DECIMER-Image-Segmentation.git && \
 WORKDIR /app
 COPY scripts/ /app/scripts/
 COPY data/ /app/data/
+COPY results/ /app/results
 COPY test /app/test
 
 # ---- 7. default entrypoint --------------------------------------------------
