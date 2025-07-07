@@ -30,4 +30,4 @@ if [[ ! -f $PATENT ]]; then
 fi
 
 echo "▶️  Processing batch list from $PATENT  (parallel jobs = $JOBS)"
-xargs -I{} -P "$JOBS" bash /app/scripts/run_all.sh "data/patents/{}" < "$PATENT"
+xargs -I{} -P "$JOBS" bash /app/scripts/run.sh "data/patents/{}" < "$PATENT"
