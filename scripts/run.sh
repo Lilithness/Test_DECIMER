@@ -49,6 +49,6 @@ echo "🧪  Running OCSR..."
 find "$png_dir" -type d -name 'filtered_segments' -print0 |
   xargs -0 -I {} find {} -maxdepth 1 -name '*.png' -print > "$png_dir"/crops.txt
 
-python scripts/ocsr.py --csv "$png_dir"/ocsr_results.csv --list "$png_dir"/crops.txt
+python scripts/ocsr_to_csv.py --csv "$png_dir"/ocsr_results.csv --list "$png_dir"/crops.txt
 
 echo "✅ Successfully processed $stem ✅"
