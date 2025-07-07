@@ -30,9 +30,4 @@ if [[ ! -f $PATENT ]]; then
 fi
 
 echo "▶️  Processing batch list from $PATENT  (parallel jobs = $JOBS)"
-# needs GNU parallel inside the container; fallback to xargs if absent
-if command -v parallel >/dev/null 2>&1; then
-  parallel -j "$JOBS" bash /app/scripts/run_all.sh data/patents/{}:::: "$PATENT"
-else
-  echo "ℹ️  GNU parallel not found"
-fi
+xargs -I{} -P "$JOBS" bash /app/scripts/run_all.sh "data/patents/{}" < "$PATENT"
