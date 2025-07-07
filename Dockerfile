@@ -29,6 +29,7 @@ WORKDIR /app
 COPY scripts/ /app/scripts/
 COPY data/ /app/data/
 COPY results/ /app/results/
+COPY test /app/test
 
 # ---- 7. default entrypoint --------------------------------------------------
 ENTRYPOINT ["bash", "/app/handler.sh"]
