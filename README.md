@@ -27,22 +27,22 @@ All pdfs should be in data/patents
 Individual csv of results (per patent) will be saved in results/ folder 
 
 
-----
+---
 
 ## 2. Output
 
-----
+```bash
 
 results/
  ├── <PATENT>_ocsr_results.csv          # Patent,SMILES,valid
  └── <PATENT>/filtered_segments/*.png
 
 
-----
+---
 
 ## 3. Folder layout
 
-----
+```bash
 
 data/
  └── patents/
