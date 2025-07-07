@@ -32,5 +32,5 @@ COPY results/ /app/results
 COPY test /app/test
 
 # ---- 7. default entrypoint --------------------------------------------------
-ENTRYPOINT ["bash", "/app/handler.sh"]
+ENTRYPOINT ["bash", "/app/scripts/handler.sh"]
 
