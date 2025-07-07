@@ -25,3 +25,32 @@ docker run --rm -it  --env-file test.env  -v ./data:/app/data   -v ./results:/ap
 You will need env file, where PATENT should be either on pdf (just basename.pdf) or a txt file with \n separated list of pdfs
 All pdfs should be in data/patents
 Individual csv of results (per patent) will be saved in results/ folder 
+
+
+----
+
+## 2. Output
+
+----
+
+results/
+ ├── <PATENT>_ocsr_results.csv          # Patent,SMILES,valid
+ └── <PATENT>/filtered_segments/*.png
+
+
+----
+
+## 3. Folder layout
+
+----
+
+data/
+ └── patents/
+     └── US11066404.pdf         
+scripts/
+ ├── pdf2png.py
+ ├── segment_pngs.py
+ ├── classify.py
+ ├── ocsr_to_csv.py
+ ├── run.sh
+ └── handler.sh
